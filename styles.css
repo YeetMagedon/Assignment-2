@@ -22,7 +22,70 @@ body {
     color: white;
     padding: 15px;
     text-align: center;
+    position: relative;
 }
+
+.navbar .menu-toggle {
+    display: none;
+}
+
+.navbar .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar .nav ul li {
+    margin: 0 20px;
+}
+
+.navbar .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar .nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu for smaller screens */
+@media (max-width: 768px) {
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #151515;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar .nav ul {
+        flex-direction: column;
+    }
+
+    .navbar .nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle:checked + .hamburger + .nav {
+        display: block;
+    }
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
